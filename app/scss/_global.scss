@@ -1,0 +1,51 @@
+html,
+body {
+	height: 100%;
+	@extend %font-main;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.page {
+	flex: 1 0 auto;
+	padding-bottom: 20px;
+	width: 100%;
+}
+.sidebar {
+	flex: 1 1 450px;
+	background: $white;
+	padding: 30px 60px;
+	height: 100%;
+	@media screen and (max-width: 1023px) {
+		padding: 30px 10px;
+		//flex: 1 1
+	}
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
+
+.main {
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	@media screen and (max-width: 1439px) {
+		padding: 0 20px;
+	}
+}
+
+.secondary {
+	color: $secondary;
+}
