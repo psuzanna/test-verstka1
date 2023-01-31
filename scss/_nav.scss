@@ -1,0 +1,40 @@
+// Navigation
+.main-nav {
+   @media screen and (max-width: 375px) {
+      display: none;
+   }
+   display: flex;
+   justify-content: center;
+   .main-nav__list {
+      display: flex;
+      .main-nav__item {
+         margin-right: 45px;
+         display: flex;
+         gap: 5px;
+         align-items: center;
+         & > a {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20.25px;
+            color: $white;
+            text-decoration: none;
+         }
+         &:hover,
+         &.active {
+            & > a {
+               color: $secondary;
+            }
+         }
+         &:hover {
+            .subnav__wrapper {
+               opacity: 1;
+               visibility: visible;
+               height: auto;
+            }
+         }
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+}
