@@ -23,7 +23,7 @@ $(function () {
 
 
   /*--------Swiper slider --------*/
-  const swiper = new Swiper('.reviews-swiper', {
+  const reviewsSwiper = new Swiper('.reviews-swiper', {
     direction: 'horizontal',
     loop: true,
     pagination: {
@@ -36,6 +36,34 @@ $(function () {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+  });
+
+  const gallerySwiper = new Swiper('.gallery-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    zoom: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centered: true,
+    //freeMode: true,
+    autoHeight: 'true',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      '320': {
+        slidesPerView: 1,
+        centered: false
+      },
+      '640': {
+        slidesPerView: 1,
+        centered: false
+      },
+      '768': {
+        slidesPerView: 2,
+      }
+    }
   });
 
   /*-------- Form Ajax ----------*/

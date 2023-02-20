@@ -33,6 +33,8 @@ body {
 }
 
 .main {
+	margin-bottom: 40px;
+	overflow: hidden;
 }
 .footer {
 	flex: 0 0 auto;
@@ -46,6 +48,28 @@ body {
 	}
 }
 
+.d-flex {
+	display: flex;
+}
+.d-flex-column {
+	flex-direction: column;
+}
+
+.main-title {
+	font-size: 2.8rem;
+	line-height: 140%;
+	margin-bottom: 35px;
+}
 .secondary {
 	color: $secondary;
+}
+
+.icon-round {
+	display: flex;
+	height: 64px;
+	width: 64px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	flex: 0 0 64px;
 }
